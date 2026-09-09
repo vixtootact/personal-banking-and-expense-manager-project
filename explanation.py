@@ -44,3 +44,12 @@
 # 59 - return name and balance
 # 61 - except part in try and except, to check for invalid data types other than digits
 # 62 - output please enter a valid amount.
+
+# 71 - function for deposit
+# 72 - try part in try and except
+# 73 - input statement to enter amount to deposit in a float data type assigned to amount var
+# 75 - checking if amount is less than/equal to 0
+# 76 - outputs amount must be greater than 0
+# 77-78 - returns balance and increments balance by the amount
+# 79 - prints amount(with 2 decimal places) has been deposited successfully
+# 81-82 - except part, prints "Invalid amount"

@@ -61,5 +61,23 @@ def create_account():
         except ValueError:
             print("Please enter a valid amount.")
 
+#Check balance function
 
+def check_balance(balance):
+    print(f"\nCurrent balance: {balance:.2f}")
+
+#Deposit function
+
+def deposit(balance):
+    try:
+        amount = float(input("Enter amount to deposit: n"))
+
+        if amount <= 0:
+            print("Amount must be greater than zero.")
+            return balance
+        balance += amount
+        print(f"n{amount:.2f} deposited successfully.")
+
+    except ValueError:
+        print("Invalid amount.")
 
