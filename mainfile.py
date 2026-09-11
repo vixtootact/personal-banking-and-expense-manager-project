@@ -81,3 +81,53 @@ def deposit(balance):
     except ValueError:
         print("Invalid amount.")
 
+# WITHDRAW FUNCTION
+
+def withdraw(balance):
+    try:
+
+        amount = float(input("Enter amount to withdraw: n"))
+
+        if amount <= 0:
+            print("Amount must be greater than zero.")
+
+        elif amount > balance:
+            print("Insufficient balance.")
+
+        else:
+            balance -= amount
+            print(f"n{amount:,.2f} withdrawn successfully.")
+
+    except ValueError:
+        print("Invalid amount.")
+    return balance
+
+# add expense function
+
+def add_expense(expenses, balance):
+    try:
+        description = input("Expense description: ")
+        category = input("Category: ")
+        amount = float(input("Amount: n"))
+
+        if amount <= 0:
+            print("Amount must be greater than zero.")
+            return balance
+        
+        if amount > balance:
+            print("Not enough balance.")
+            return balance
+        
+        expense = {
+            "description": description,
+            "category": category,
+            "amount": amount
+        }
+
+        expenses.append(expense)
+        balance -= amount
+        print("Expense added successfully.")
+        
+    except ValueError:
+        print("Invalid amount.")
+    return balance
