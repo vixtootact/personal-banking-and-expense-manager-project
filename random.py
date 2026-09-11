@@ -239,4 +239,3 @@
 # 18. bool("Hello")
 # 19. bool("")
 # 20. int(input())
-

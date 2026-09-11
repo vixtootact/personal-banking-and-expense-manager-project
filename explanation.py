@@ -53,4 +53,12 @@
 # 77-78 - returns balance and increments balance by the amount
 # 79 - prints amount(with 2 decimal places) has been deposited successfully
 # 81-82 - except part, prints "Invalid amount"
-# 84 - 
+# 86 - a withdraw function
+# 87 - try part in try and except
+# 89 - user input for amount in float data type
+# 91-92 - if amount is less than or equal to 0, print amount must be greater than 0
+# 94-95 - if amount is greater than balance, print Insufficient balance
+# 97-98 - else subtract the amount from the balance 
+# 99 - print amount (in 2 decimal places) withdrawn successfully
+# 101-102 - print Invalid amount when there valueError arises using except
+# 103 - return balance after the try and except

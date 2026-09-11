@@ -96,7 +96,7 @@ def withdraw(balance):
 
         else:
             balance -= amount
-            print(f"n{amount:,.2f} withdrawn successfully.")
+            print(f"n{amount:.2f} withdrawn successfully.")
 
     except ValueError:
         print("Invalid amount.")
@@ -127,7 +127,7 @@ def add_expense(expenses, balance):
         expenses.append(expense)
         balance -= amount
         print("Expense added successfully.")
-        
+
     except ValueError:
         print("Invalid amount.")
     return balance
