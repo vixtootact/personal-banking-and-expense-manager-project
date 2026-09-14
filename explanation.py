@@ -62,3 +62,9 @@
 # 99 - print amount (in 2 decimal places) withdrawn successfully
 # 101-102 - print Invalid amount when there valueError arises using except
 # 103 - return balance after the try and except
+
+#Add expense function
+
+# 107 - function to add expense is created
+# 108 - try and except (try)
+# 110-111 - 

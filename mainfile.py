@@ -102,13 +102,14 @@ def withdraw(balance):
         print("Invalid amount.")
     return balance
 
-# add expense function
+# add expense function:
 
 def add_expense(expenses, balance):
     try:
+
         description = input("Expense description: ")
         category = input("Category: ")
-        amount = float(input("Amount: n"))
+        amount = float(input("Amount: "))
 
         if amount <= 0:
             print("Amount must be greater than zero.")
@@ -123,7 +124,6 @@ def add_expense(expenses, balance):
             "category": category,
             "amount": amount
         }
-
         expenses.append(expense)
         balance -= amount
         print("Expense added successfully.")
@@ -131,3 +131,35 @@ def add_expense(expenses, balance):
     except ValueError:
         print("Invalid amount.")
     return balance
+
+# View expenses function:
+
+def view_expenses(expenses):
+
+    if not expenses:
+        print("\nNo expenses recorded.")
+        return
+    print("\n===== ALL EXPENSES =====")
+
+    for index, expense in enumerate(expenses, start=1):
+        print(f"\nExpense {index}")
+        print(f"Description : {expense['description']}")
+        print(f"Category    : {expense['category']}")
+        print(f"Amount      : {expense['amount']:,.2f}")
+
+# Search expense function:
+
+def search_expense(expenses):
+    keyword = input("Enter expense name to search: ").lower()
+    found = False
+
+    for expense in expenses:
+        if keyword in expense["description"].lower():
+            print("\nExpense Found")
+            print(f"Description : {expense['description']}")
+            print(f"Category    : {expense['category']}")
+            print(f"Amount      : {expense['amount']:,.2f}")
+            found = True
+            
+    if not found:
+        print("Expense not found.")
